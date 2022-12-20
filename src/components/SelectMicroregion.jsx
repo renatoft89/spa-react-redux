@@ -1,9 +1,20 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getDetailsMicroregion } from '../services';
 
 function SelectMicroregion() {
-  const [microregion, setMicroregion] = useState('');
+  const dispatch = useDispatch()
+  
   const options = useSelector((state) => state);
+
+  const [microregion, setMicroregion] = useState('');
+  
+  useEffect(() => {
+    const getApi = async () => {
+      const response = await getDetailsMicroregion(microregion)
+      dispatch()
+    }
+  })
   console.log(options);
   if (!options) {
     return <p>Carregando...</p>

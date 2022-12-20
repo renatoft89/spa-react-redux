@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import MunicipalInfo from '../components/MunicipalInfo';
 import SelectMicroregion from '../components/SelectMicroregion';
 import SelectStatesBr from '../components/SelectStatesBr';
 import { actionSetStatesBr } from '../redux/actions';
@@ -21,6 +22,7 @@ function Home() {
     <div>
       <SelectStatesBr />
       <SelectMicroregion />
+      <MunicipalInfo />
     </div>
   );
 }
