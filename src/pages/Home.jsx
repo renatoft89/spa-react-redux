@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import SelectStatesBr from '../components/SelectStatesBr';
 import { actionSetStatesBr } from '../redux/actions';
 import { getStatesBr } from '../services';
 
@@ -10,15 +11,14 @@ function Home() {
   useEffect (() => {
     const getApi = async () => {
       const response = await getStatesBr();
-      dispatch(actionSetStatesBr(response))
-  
+      dispatch(actionSetStatesBr(response));  
     }  
     getApi();
   }, [dispatch])
 
   return (
     <div>
-      <h1>Home</h1>
+      <SelectStatesBr />
     </div>
   );
 }
