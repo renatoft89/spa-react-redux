@@ -7,7 +7,7 @@ import { getMicroregion } from '../services';
 function Select() {
   const dispatch = useDispatch();
 
-  const options = useSelector((state) => state);
+  const options = useSelector(({ statesBr }) => statesBr);
 
   const [selectedState, setSelectedState] = useState('');
 
@@ -18,11 +18,6 @@ function Select() {
     }  
     getApi();
   }, [dispatch, selectedState])
-
-
-  if (!options) {
-    return <p>error...</p>
-  }
 
   return (
     <div>
@@ -35,7 +30,7 @@ function Select() {
         <option value="" disabled hidden>
           Selecione um estado
         </option>
-        {options.statesBr.sort((a, b) => a.nome.localeCompare(b.nome)).map(state => (
+        {options.sort((a, b) => a.nome.localeCompare(b.nome)).map(state => (
           <option key={state.nome} value={state.sigla}>
             {state.nome}
           </option>

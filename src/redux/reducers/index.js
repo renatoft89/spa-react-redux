@@ -3,7 +3,7 @@ import { SET_STATESBR_TYPE, SET_MICROREGION_TYPE, SET_DETAILS_MICROREGION_TYPE }
 
 const INITIAL_STATE = {
   statesBr: [],
-  microregion: [],
+  microregion: [{id: 0, nome: "-----------"}],
   detailsMicroregion: [],
 }
 
@@ -25,7 +25,7 @@ const rootReducer = (state = INITIAL_STATE, action) => {
         detailsMicroregion: action.payload,
       }         
     default:
-      break;
+      return state;
   }
 }
 
