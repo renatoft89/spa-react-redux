@@ -35,11 +35,13 @@ function Select() {
         <option value="" disabled hidden>
           Selecione um estado
         </option>
-        {options.statesBr.map(state => (
+        {options.statesBr.sort((a, b) => a.nome.localeCompare(b.nome)).map(state => (
           <option key={state.nome} value={state.sigla}>
             {state.nome}
           </option>
         ))}
+
+
       </select>
     </div>
   );
