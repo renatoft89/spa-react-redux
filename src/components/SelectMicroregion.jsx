@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { actionSetDetailsMicroregion } from '../redux/actions';
 import { getDetailsMicroregion } from '../services';
 
 function SelectMicroregion() {
@@ -7,15 +8,19 @@ function SelectMicroregion() {
   
   const options = useSelector((state) => state);
 
-  const [microregion, setMicroregion] = useState('');
+  const [microregionId, setmicroregionId] = useState('');
   
   useEffect(() => {
     const getApi = async () => {
-      const response = await getDetailsMicroregion(microregion)
-      dispatch()
+      const response = await getDetailsMicroregion(microregionId)
+      console.log(microregionId);
+      dispatch(actionSetDetailsMicroregion(response))
     }
-  })
+    getApi()
+  }, [dispatch, microregionId]);
+
   console.log(options);
+  
   if (!options) {
     return <p>Carregando...</p>
   }
@@ -25,14 +30,14 @@ function SelectMicroregion() {
       <label htmlFor="stateSelect">Escolha uma Microregião:</label>
       <select
         id="microregionSelect"
-        value={microregion}
-        onChange={e => setMicroregion(e.target.value)}
+        value={microregionId}
+        onChange={e => setmicroregionId(e.target.value)}
       >
         <option value="" disabled hidden>
           Selecione uma Microregião
         </option>
         {options.microregion.sort((a, b) => (a > b)).map(state => (
-          <option key={state.nome} value={state.sigla}>
+          <option key={state.id} value={state.id}>
             {state.nome}
           </option>
         ))}

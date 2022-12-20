@@ -1,9 +1,10 @@
-import { SET_STATESBR_TYPE, SET_MICROREGION_TYPE } from "../actions";
+import { SET_STATESBR_TYPE, SET_MICROREGION_TYPE, SET_DETAILS_MICROREGION_TYPE } from "../actions";
 
 
 const INITIAL_STATE = {
   statesBr: [],
   microregion: [],
+  detailsMicroregion: [],
 }
 
 const rootReducer = (state = INITIAL_STATE, action) => {
@@ -17,6 +18,11 @@ const rootReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         microregion: action.payload,
+      }
+    case SET_DETAILS_MICROREGION_TYPE:
+      return {
+        ...state,
+        detailsMicroregion: action.payload,
       }         
     default:
       break;
