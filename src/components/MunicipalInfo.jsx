@@ -6,15 +6,16 @@ function MunicipalInfo() {
   console.log(detailsRegion);
   return (
     <div className='details-region'>
-      <h1>Informações das Cidades e Distritos da Região</h1>
+      <h1 className='title-info'>Informações das Cidades e Distritos da Região</h1>
       {
         detailsRegion.map((region) => (
           <Fragment key={region.id}>
-            <h3>A Cidade de {region.nome}</h3>
-            <p>Sua Microregião é: {region.municipio.microrregiao.nome}</p>
-            <p>Sua mesorregião é: {region.municipio.microrregiao.mesorregiao.nome}</p>
-            <p>Pertence ao estado: 
-              {region.municipio.microrregiao.mesorregiao.UF.nome} - {region.municipio.microrregiao.mesorregiao.UF.sigla} </p>
+            <h2 className='city-name'>{region.nome}</h2>
+            <p className='region-name'>Sua Microregião é: {region.municipio.microrregiao.nome}</p>
+            <p className='messoregion-name'>Sua mesorregião é: {region.municipio.microrregiao.mesorregiao.nome}</p>
+            <p className='state-name'>Pertence ao estado:  
+              { region.municipio.microrregiao.mesorregiao.UF.nome} - {region.municipio.microrregiao.mesorregiao.UF.sigla} </p>
+            <p>Sua Região é: {region.municipio['regiao-imediata'].nome}</p>
           </Fragment>
         ))
       }
