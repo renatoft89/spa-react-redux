@@ -16,9 +16,6 @@ export const getMicroregion = async (UF) => {
 }
 
 export const getDetailsMicroregion = async (municipalityId) => {
-  if (!municipalityId) {
-    return []
-  }
   
   const response = await fetch(`${BASE_API_URL}municipios/${municipalityId}/distritos`);
   const data = await response.json();
