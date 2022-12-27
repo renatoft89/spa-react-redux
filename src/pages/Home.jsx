@@ -7,7 +7,7 @@ import SelectMicroregion from '../components/SelectMicroregion';
 import SelectStatesBr from '../components/SelectStatesBr';
 import { actionSetStatesBr } from '../redux/actions';
 import { getStatesBr } from '../services';
-
+import '../styles/Home.css'
 
 function Home() {
   const dispatch = useDispatch();
@@ -23,10 +23,12 @@ function Home() {
   return (
     <div>
       <Header />
-      <div className='select-options'>
-        <SelectStatesBr />
-        <SelectMicroregion />
-      </div>
+      <section className='select-container'>
+        <div className='select-options'>
+          <SelectStatesBr />
+          <SelectMicroregion />
+        </div>
+      </section>
       <MunicipalInfo />
       <Footer />
     </div>

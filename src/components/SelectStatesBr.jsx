@@ -20,7 +20,7 @@ function Select() {
   }, [dispatch, selectedState])
 
   return (
-    <div>
+    <>
       <label htmlFor="stateSelect">Escolha um estado:</label>
       <select
         id="stateSelect"
@@ -35,10 +35,8 @@ function Select() {
             {state.nome}
           </option>
         ))}
-
-
       </select>
-    </div>
+    </>
   );
 }
 

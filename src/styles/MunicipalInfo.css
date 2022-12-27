@@ -1,0 +1,29 @@
+.title-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.container-details {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.card-detais {
+  background-color: rgba(0, 0, 255, 0.178);
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-left: 10px;
+  width: 40%;
+  margin-top: 26px;
+}
+
+.card-detais .city-name {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card-detais p {
+  margin-left: 5px;  
+}

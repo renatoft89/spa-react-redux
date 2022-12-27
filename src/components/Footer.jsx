@@ -1,9 +1,10 @@
 import React from 'react';
+import '../styles/Footer.css'
 
 function Footer() {
   return (
     <footer>
-      <p>Feito por Renato</p>
+      <p>© Copyright 2022</p>
     </footer>
 
   );

@@ -5,11 +5,11 @@ import { getDetailsMicroregion } from '../services';
 
 function SelectMicroregion() {
   const dispatch = useDispatch()
-  
+
   const options = useSelector(({ microregion }) => microregion);
-  
+
   const [microregionId, setmicroregionId] = useState('');
-  
+
   useEffect(() => {
     const getApi = async () => {
       const response = await getDetailsMicroregion(microregionId)
@@ -17,11 +17,10 @@ function SelectMicroregion() {
     }
     getApi()
   }, [dispatch, microregionId]);
-  
+
   return (
-    <div>
-      <label htmlFor="stateSelect">Escolha uma Microregião:</label>
-      <select
+    <>
+      <label htmlFor="stateSelect">Escolha uma Microregião:</label><select
         id="microregionSelect"
         value={microregionId}
         onChange={e => setmicroregionId(e.target.value)}
@@ -35,7 +34,8 @@ function SelectMicroregion() {
           </option>
         ))}
       </select>
-    </div>
+    </>
+
   );
 }
 
