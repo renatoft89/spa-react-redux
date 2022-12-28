@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/github-page/static/css/main.2382ac9f.css",
-    "main.js": "/github-page/static/js/main.c82db2cb.js",
-    "index.html": "/github-page/index.html",
-    "main.2382ac9f.css.map": "/github-page/static/css/main.2382ac9f.css.map",
-    "main.c82db2cb.js.map": "/github-page/static/js/main.c82db2cb.js.map"
+    "main.css": "/spa-react-redux/static/css/main.2382ac9f.css",
+    "main.js": "/spa-react-redux/static/js/main.c82db2cb.js",
+    "index.html": "/spa-react-redux/index.html",
+    "main.2382ac9f.css.map": "/spa-react-redux/static/css/main.2382ac9f.css.map",
+    "main.c82db2cb.js.map": "/spa-react-redux/static/js/main.c82db2cb.js.map"
   },
   "entrypoints": [
     "static/css/main.2382ac9f.css",
