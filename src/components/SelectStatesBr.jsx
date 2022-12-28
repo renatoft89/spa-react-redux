@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { actionSetMicroregion } from '../redux/actions';
 import { getMicroregion } from '../services';
+import '../styles/SelectStatesBr.css'
 
 
 function Select() {

@@ -1,0 +1,8 @@
+.select-options #microregionSelect {
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #e3f5f23a;
+  color: #126355b7;
+  font-size: 18px;
+}

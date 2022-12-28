@@ -9,7 +9,7 @@
   width: 98%;
   display: flex;
   justify-content: center;
-  
+  flex-wrap: wrap;  
 }
 
 .card-detais {
