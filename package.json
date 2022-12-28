@@ -1,6 +1,7 @@
 {
   "name": "spa-react-ipam",
   "version": "0.1.0",
+  "homepage": "github-page/",
   "private": true,
   "dependencies": {
     "@redux-devtools/extension": "^3.2.3",
