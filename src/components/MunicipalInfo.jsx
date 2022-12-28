@@ -21,8 +21,9 @@ function MunicipalInfo() {
               <h2 className='city-name'>{region.nome}</h2>
               <p className='region-name'>Microregião: {region.municipio.microrregiao.nome}</p>
               <p className='messoregion-name'>Messorregião: {region.municipio.microrregiao.mesorregiao.nome}</p>
-              <p className='state-name'>UF:
-                {region.municipio.microrregiao.mesorregiao.UF.nome} - {region.municipio.microrregiao.mesorregiao.UF.sigla} </p>
+              <p className='state-name'>UF:&nbsp;
+              {region.municipio.microrregiao.mesorregiao.UF.nome} - &nbsp;
+              {region.municipio.microrregiao.mesorregiao.UF.sigla} </p>
               <p>Região: {region.municipio['regiao-imediata'].nome}</p>
             </div>
           </Fragment>
