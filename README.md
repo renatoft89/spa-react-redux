@@ -25,7 +25,7 @@ https://github.com/bgeneto/bandeiras-br
   - _API_ do IBGE: https://servicodados.ibge.gov.br/api/docs/localidades
 ---
 
-### Protótipo do projeto
+### Deploy da aplicaçao no GitHub Pages
 
 Você pode acessar a aplicação no link:
 [DEPLOY](https://renatoft89.github.io/spa-react-redux/)
