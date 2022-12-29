@@ -6,10 +6,10 @@ function Header() {
   return (
     <header className='header'>
       <nav className='nav-header'>
-        <a href='/'>Home</a>
+        <a href='/spa-react-redux'>Home</a>
         <div>
-          <a href='/'>Contato</a>
-          <a href='/'>Sobre</a>
+          <a href='/spa-react-redux'>Contato</a>
+          <a href='/spa-react-redux'>Sobre</a>
         </div>
       </nav>
 

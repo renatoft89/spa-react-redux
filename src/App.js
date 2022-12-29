@@ -1,8 +1,12 @@
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home";
 
 function App() {
   return (
-    <Home />
+    <Routes>
+      <Route exact path="/spa-react-redux" element={ <Home /> } />
+    </Routes>
   );
 }
 
